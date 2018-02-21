@@ -1,0 +1,24 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "27.0.2"
+
+    defaultConfig {
+        applicationId "com.newbrowser50"
+        minSdkVersion 19
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    dependencies {
+        compile 'be.shouldit:android-proxy-library:4.2.6'
+        compile 'com.android.support:support-v4:23.+'
+    }
+}
